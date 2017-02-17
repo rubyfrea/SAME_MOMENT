@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <title>SAME | MOMENT   Login</title>
+</head>
+
+<body>
+
+    <div class="title"> SAME | MOMENT </div>
+    <nav class="navbar navbar-default ruiset">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/samemoment/"> Welcome! Register or Log in.</a>
+      </div>
+      <ul class="nav navbar-nav">
+
+        <li class="active"><a href="/samemoment/">Home</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/samemoment/login">Log In</a></li>
+        <li><a href="/samemoment/register">Register</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="content">
+
+    {% if form.errors %}
+        <p>
+            Incorrect user name and password.
+        </p>
+    {% endif %}
+    <div class="sub-title">
+        Log In
+    </div>
+    <form method="post" action="{% url 'login' %}">
+        <table>
+        <tr>
+            <td>{{ form.username.label_tag }}  </td>
+
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}  </td>
+            <td>{{ form.password }}</td>
+        </tr>
+        </table>
+
+        <button type="submit" class="btn btn-default">LogIn</button>
+
+        {% csrf_token %}
+    </form>
+  </div>
+  <div class="tail">
+    <h5> Designed by <a href="http://github.com/rubyfrea">Rui Tian</a>
+      Website: <a href="http://limmm.com">limmm Pumela</a>
+      Linkedin: <a href="http://www.linkedin.com/in/rui-tian-78ab1b112"> Rui Tian</a>
+    </h5>
+  </div>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

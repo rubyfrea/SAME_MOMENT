@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <title>SAME | MOMENT  Register</title>
+</head>
+
+<body>
+  <div class="title"> SAME | MOMENT </div>
+  <nav class="navbar navbar-default ruiset">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/samemoment/">Welcome!</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/samemoment/">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/samemoment/login">Log In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content">
+    {% for error in errors %}
+        <p>
+            {{ error }}
+        </p>
+    {% endfor %}
+
+    <div class="sub-title">
+        Registration
+    </div>
+
+    <form method="post" action="/samemoment/register">
+        <table>
+        <tr>
+            <td><label>Username:</label></td>
+            <td><input type="text" name="username" value="{{username}}" autofocus></td>
+        </tr>
+        <tr>
+            <td><label>Firstname:</label></td>
+            <td><input type="text" name="first_name" value="{{first_name}}" autofocus></td>
+        </tr>
+        <tr>
+            <td><label>Lastname:</label></td>
+            <td><input type="text" name="last_name" value="{{last_name}}" autofocus></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" name="password1"></td>
+        </tr>
+        <tr>
+            <td><label>Confirm password:</label></td>
+            <td><input type="password" name="password2"></td>
+        </tr>
+        </table>
+
+        <input class="btn btn-default" type="submit" value="Register" />
+        {% csrf_token %}
+    </form>
+
+  </div>
+  <div class="tail">
+    <h5> Designed by <a href="http://github.com/rubyfrea">Rui Tian</a>
+      Website: <a href="http://limmm.com">limmm Pumela</a>
+      Linkedin: <a href="http://www.linkedin.com/in/rui-tian-78ab1b112"> Rui Tian</a>
+    </h5>
+  </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
