@@ -1,0 +1,85 @@
+
+body {
+  background-color: #bacac6;
+}
+a,h4{
+  color: #50616d;
+  text-decoration: none;
+}
+a:hover{
+  color: #758299;
+  list-style: none;
+  text-decoration: none;
+}
+.content{
+  padding: 10px 60px 30px 60px;
+  background-color:#f3f9f1;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 10px 10px;
+    color: white;
+}
+
+.info{
+  color: #75878a;
+  padding: 10px 20px;
+
+}
+.posts{
+  margin: 10px 0px;
+  border-radius: 2%;
+  border-left-style: dashed;
+  border-right:dashed;
+  border-color: white;
+  padding: 20px;
+}
+
+.sub-title {
+  border-radius: 8%;
+  margin:10px 0px;
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 10px 20px;
+  color: #75878a;
+  background-color: white;
+}
+.tail{
+  margin: 10px 100px;
+  color: white;
+  font-size: large;
+
+}
+
+.error {
+    font-size: large;
+    color:green;
+}
+
+.view-form {
+    padding:7px;
+}
+
+.add-form{
+    padding: 10px 10px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.details {
+    font-size: large;
+    font-style: italic;
+}
+.ruifont{
+  color:#50616d;
+  padding: 2px;
+  min-height: 50px;
+}
+.ruiset{
+    background-color: #bbcdc5;
+    padding: 0px 50px 0px 20px;
+}
